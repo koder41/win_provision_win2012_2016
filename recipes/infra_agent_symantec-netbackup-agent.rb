@@ -28,7 +28,7 @@ when "6.3.9600"
     nbu_agent_file = "#{nbu_agent_destination}\\#{node['infra_agent']['symantec-netbackup']['win2012']['source']}_#{node['infra_agent']['symantec-netbackup']['win2012']['version_old']}"
 
 when "10.0.14393"
-        if "#{environment}" == 'SIT'
+        if "#{environment}" == 'TEST'
             nbu_agent_source = "#{chefserver}#{node['infra_agent']['symantec-netbackup']['win2016']['source']}_#{node['infra_agent']['symantec-netbackup']['win2016']['version_old']}"
             nbu_agent_destination = "#{node['infra_agent']['symantec-netbackup']['win2016']['path']}"
             nbu_agent_file = "#{nbu_agent_destination}\\#{node['infra_agent']['symantec-netbackup']['win2016']['source']}_#{node['infra_agent']['symantec-netbackup']['win2016']['version_old']}"
@@ -55,13 +55,13 @@ powershell_script "Extracting #{nbu_agent_source}.zip" do
     EOH
     guard_interpreter :powershell_script
     action :nothing
-    notifies :run, "batch[Installing silentclient-#{environment}.cmd]", :immediately
+    notifies :run, "batch[Installing symantec-netbackup-#{environment}.cmd]", :immediately
 end
 
-batch "Installing silentclient-#{environment}.cmd" do
+batch "Installing symantec-netbackup-#{environment}.cmd" do
     cwd "#{nbu_agent_file}"
     code <<-EOH 
-        silentclient-#{environment}.cmd
+        symantec-netbackup-#{environment}.cmd
     EOH
     action :nothing
 end
