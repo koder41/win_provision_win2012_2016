@@ -4,7 +4,7 @@ maintainer_email 'gcabral_a@yahoo.com'
 license 'All Rights Reserved'
 description 'Installs/Configures win_provision_win2012_2016'
 long_description 'Installs/Configures win_provision_win2012_2016'
-version '0.1.0'
+version '0.1.1'
 chef_version '>= 14.0'
 
 # The `issues_url` points to the location where issues for this cookbook are
