@@ -4,7 +4,7 @@
 #
 # Copyright:: 2020, The Authors, All Rights Reserved.
 
-exit! if registry_key_exists?('HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentControlSet\Uninstall\Symantec NetBackup Client') || registry_key_exists?('HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentControlSet\Uninstall\VERITAS NetBackup Client') 
+exit! if registry_key_exists?('HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Symantec NetBackup Client') || registry_key_exists?('HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\VERITAS NetBackup Client') 
 
 require 'openssl'
 OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE
@@ -34,6 +34,7 @@ WHEN '10.0.14393'
     nbu_agent_destination = node['infra_agent']['symantec-netbackup']['win2016']['path']
     nbu_agent_file = "#{nbu_agent_destination}\\#{node['infra_agent']['symantec-netbackup']['win2016']['source']}_#{node['infra_agent']['symantec-netbackup']['win2016']['version_new']}"
   end
+
 ELSE
   puts 'non windows'
   exit!
