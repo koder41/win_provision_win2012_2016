@@ -9,7 +9,7 @@ exit! if registry_key_exists?('HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\Cur
 require 'openssl'
 OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE
 
-dcenter = dcenter_location(node['hostname'])
+get_dcenter = dcenter_location(node['hostname'])
 svr_envi = svr_environment(node['hostname'])
 
 if svr_envi == 'true'
@@ -22,7 +22,7 @@ case check
 when 'u'
   envi = 'uat'
 when 'p'
-  if dcenter == 'site_a'
+  if get_dcenter == 'site_a'
     envi = 'prod'
   else
     envi = 'dr'
