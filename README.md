@@ -6,6 +6,10 @@ This is my first ever git project which configures a machine for Day 1 infrastru
 
 Need to define below custom configuration as per needed
 
-### Registry Keys to store custom values to be used by Chef as a place holder
+### Update History
 
-HKEY_LOCAL_MACHINE\software\project\goldimage
+|	Version	|	Date	|	Author/Developer	|	Changes	|	Remarks	|
+|	'----------	|	'----------	|	'----------	|	'----------	|	'----------	|
+|	v.0.1.0	|	01/02/20	|	Gilbert Cabral	|	Initial Release	|	Initial Release	|
+|	v.0.1.1	|	01/02/20	|	Gilbert Cabral	|	Fixed cookstyle and foodcritic issue	|		|
+|	v.0.1.2	|	01/05/20	|	Gilbert Cabral	|	Added Module / Helper file for some environment specific condition (I.e hostname, datacenter location). Added ReadMe details	|		|
