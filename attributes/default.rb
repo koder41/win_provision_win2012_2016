@@ -2,9 +2,9 @@
 default['url_artifactory'] = {
   'dev' => 'uxappd1001',
   'test' => 'uxappt1001',
-  'uat' => 'uxappu1001',
-  'prod' => 'uxappp1001',
-  'dr' => 'uxappr1001',
+  'uat' => 'uxappu2001',
+  'prod' => 'uxappp3001',
+  'dr' => 'uxappr4001',
 }
 
 # Infra Agent - Symantec Netbackup Client - Windows Server 2012
