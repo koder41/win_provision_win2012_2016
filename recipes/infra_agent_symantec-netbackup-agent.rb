@@ -13,9 +13,9 @@ get_dcenter = dcenter_location(node['hostname'])
 svr_envi = svr_environment(node['hostname'])
 
 if svr_envi == 'true'
-  check = node['hostname'][8]
+  check = node['hostname'][8].downcase
 else
-  check = node['hostname'][5]
+  check = node['hostname'][5].downcase
 end
 
 case check
@@ -75,13 +75,13 @@ powershell_script "Extracting #{nbu_agent_source}.zip" do
   EOH
   guard_interpreter :powershell_script
   action :nothing
-  notifies :run, "batch[Installing silentclient-#{svrenvi}.cmd]", :immediately
+  notifies :run, "batch[Installing symantec-nbu-agent-#{envi}.cmd]", :immediately
 end
 
-batch "Installing silentclient-#{svrenvi}.cmd" do
+batch "Installing symantec-nbu-agent-#{envi}.cmd" do
   cwd nbu_agent_file
   code <<-EOH
-    silentclient-#{svrenvi}.cmd
+    symantec-nbu-agent-#{envi}.cmd
   EOH
   action :nothing
 end
