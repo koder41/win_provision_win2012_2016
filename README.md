@@ -11,6 +11,6 @@ Need to define below custom configuration as per needed
 |	Version	|	Date	|	Author/Developer	|	Changes	|	Remarks	|
 |	----------	|	----------	|	----------	|	----------	|	----------	|
 |	v.0.1.0	|	02/01/2020	|	Gilbert Cabral	|	Initial Release	|	Initial Release	|
-|	v.0.1.1	|	02/02/2020	|	Gilbert Cabral	|	Fixed cookstyle and foodcritic issue	|		|
+|	v.0.1.1	|	02/01/2020	|	Gilbert Cabral	|	Fixed cookstyle and foodcritic issue	|		|
 |	v.0.1.2	|	05/01/2020	|	Gilbert Cabral	|	Added and updated Module / Helper & README Files	|		|
 |	v.0.1.3	|	07/01/2020	|	Gilbert Cabral	|	Fixed typo error on recipe & change date format to dd/MM/yyyy	|		|
